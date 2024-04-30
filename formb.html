@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Experiences</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/abb.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+            width: 80%;
+            text-align: center;
+        }
+
+        .heading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Align horizontally */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding shadow effect to heading */
+            margin: 0; /* Remove default margin */
+        }
+
+        textarea {
+            width: calc(100% - 20px); /* Adjusted width */
+            height: 300px; /* Adjusted height */
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #ccc; /* Increased border size */
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* blue color */
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* darker blue on hover */
+        }
+
+        /* Popup styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heading-container">
+        <h1>Publish Your Passion,</h1>
+        <h1>Your Way</h1>
+    </div>
+    <form id="experienceForm" action="#">
+        <textarea name="experience" id="experience" placeholder="Share your experience..."></textarea>
+        <button type="submit" onclick="showPopup()">Submit</button>
+    </form>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    Your experience is submitted successfully.
+</div>
+
+<script>
+    function showPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+        // Hide popup after 3 seconds
+        setTimeout(function () {
+            popup.style.display = "none";
+        }, 8000);
+    }
+</script>
+
+</body>
+</html>

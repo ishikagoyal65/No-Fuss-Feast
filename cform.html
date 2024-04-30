@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dietary Preference Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/eat.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7); /* Add opacity to background */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #ff1493;
+    }
+  </style>
+  <script>
+    function ab()
+    {
+    alert("You receipe will be emailed to you shortly");
+  }
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Dietary Preference Form</h1>
+    <form action="cform.php" method="post">
+      
+      <div class="question">
+        <p>1. "Which best describes your dietary preference?"</p>
+        <label for="dietary_preference_a">
+          <input type="radio" id="dietary_preference_a" name="a" value="vegan">
+          a) Vegan
+        </label>
+        <label for="dietary_preference_b">
+          <input type="radio" id="dietary_preference_b" name="a" value="vegetarian">
+          b) Gluten Free
+        </label>
+        <label for="dietary_preference_c">
+          <input type="radio" id="dietary_preference_c" name="a" value="omnivore">
+          c) Vegetarian
+        </label>
+        <label for="dietary_preference_d">
+          <input type="radio" id="dietary_preference_d" name="a" value="other">
+          d) Non-vegetarian
+        </label>
+      </div>
+      
+      <div class="question">
+        <p>2. "Do you have any allergies or dietary restrictions?"</p>
+        <label for="allergies_a">
+          <input type="radio" id="allergies_a" name="b" value="no_allergies">
+          a) No allergies or restrictions
+        </label>
+        <label for="allergies_b">
+          <input type="radio" id="allergies_b" name="b" value="gluten_free">
+          b) Gluten-free
+        </label>
+        <label for="allergies_c">
+          <input type="radio" id="allergies_c" name="b" value="nut_allergies">
+          c) Nut allergies
+        </label>
+        <label for="allergies_d">
+          <input type="radio" id="allergies_d" name="b" value="other">
+          d) Other (please specify)
+           <div class="question">
+        <p>3. "How do you feel about spice levels in your dishes?"</p>
+        <label for="spice_level_a">
+          <input type="radio" id="spice_level_a" name="c" value="mild">
+          a) Mild
+        </label>
+        <label for="spice_level_b">
+          <input type="radio" id="spice_level_b" name="c" value="medium">
+          b) Medium
+        </label>
+        <label for="spice_level_c">
+          <input type="radio" id="spice_level_c" name="c" value="spicy">
+          c) Spicy
+        </label>
+        <label for="spice_level_d">
+          <input type="radio" id="spice_level_d" name="c" value="non_spicy">
+          d) Prefer non-spicy options
+        </label>
+      </div>
+      
+      <div class="question">
+        <p>4. "Is there a specific regional cuisine you prefer?"</p>
+        <label for="regional_cuisine_a">
+          <input type="radio" id="regional_cuisine_a" name="d" value="asian">
+          a) Asian
+        </label>
+        <label for="regional_cuisine_b">
+          <input type="radio" id="regional_cuisine_b" name="d" value="mediterranean">
+          b) Mediterranean
+        </label>
+        <label for="regional_cuisine_c">
+          <input type="radio" id="regional_cuisine_c" name="d" value="latin_american">
+          c) Latin American
+        </label>
+        <label for="regional_cuisine_d">
+          <input type="radio" id="regional_cuisine_d" name="d" value="other">
+          d) Other (please specify)
+        <div class="question">
+        <p>5. "Are you looking for options with specific nutritional requirements?"</p>
+        <label for="nutritional_requirements_a">
+          <input type="radio" id="nutritional_requirements_a" name="e" value="low_calorie">
+          a) Low-calorie
+        </label>
+        <label for="nutritional_requirements_b">
+          <input type="radio" id="nutritional_requirements_b" name="e" value="high_protein">
+          b) High-protein
+        </label>
+        <label for="nutritional_requirements_c">
+          <input type="radio" id="nutritional_requirements_c" name="e" value="balanced_nutrition">
+          c) Balanced nutrition
+        </label>
+        <label for="nutritional_requirements_d">
+          <input type="radio" id="nutritional_requirements_d" name="e" value="no_specific_requirements">
+          d) No specific requirements
+        </label>
+      </div>
+      
+      <!-- Question 6 -->
+      <div class="question">
+        <p>6. "Are there any ingredients you'd like to include or avoid?"</p>
+        <label for="ingredients_preference_a">
+          <input type="radio" id="ingredients_preference_a" name="f" value="include_ingredients">
+          a) Include specific ingredients
+        </label>
+        <label for="ingredients_preference_b">
+          <input type="radio" id="ingredients_preference_b" name="f" value="avoid_ingredients">
+          b) Avoid specific ingredients
+        </label>
+        <label for="ingredients_preference_c">
+          <input type="radio" id="ingredients_preference_c" name="f" value="no_preference_ingredients">
+          c) No preference
+        </label>
+        <label for="ingredients_preference_d">
+          <input type="radio" id="ingredients_preference_d" name="f" value="other">
+          d) Other (please specify)
+        </label>
+      </div>
+      
+      <!-- Question 7 -->
+      <div class="question">
+        <p>7. "What taste profile do you prefer in your meals?"</p>
+        <label for="taste_profile_a">
+          <input type="radio" id="taste_profile_a" name="g" value="sweet">
+          a) Sweet
+        </label>
+        <label for="taste_profile_b">
+          <input type="radio" id="taste_profile_b" name="g" value="savory">
+          b) Savory
+        </label>
+        <label for="taste_profile_c">
+          <input type="radio" id="taste_profile_c" name="g" value="spicy">
+          c) Spicy
+        </label>
+        <label for="taste_profile_d">
+          <input type="radio" id="taste_profile_d" name="g" value="balanced_flavors">
+          d) Balanced flavors
+        </label>
+      </div>
+      
+      <!-- Question 8 -->
+      <div class="question">
+        <p>8. "Do you have any specific dietary goals we should consider?"</p>
+        <label for="dietary_goals_a">
+          <input type="radio" id="dietary_goals_a" name="h" value="weight_management">
+          a) Weight management
+        </label>
+        <label for="dietary_goals_b">
+          <input type="radio" id="dietary_goals_b" name="h" value="muscle_building">
+          b) Muscle building
+          </label>
+        <label for="dietary_goals_c">
+          <input type="radio" id="dietary_goals_c" name="h" value="general_health">
+          c) General health
+        </label>
+        <label for="dietary_goals_d">
+          <input type="radio" id="dietary_goals_d" name="h" value="no_specific_goals">
+          d) No specific goals
+        </label>
+      </div>
+      
+      <!-- Question 9 -->
+      <div class="question">
+        <p>9. "Do you prefer a balance between indulgence and health in your food choices?"</p>
+        <label for="balance_preference_a">
+          <input type="radio" id="balance_preference_a" name="i" value="balanced_options">
+          a) Yes, balanced options
+        </label>
+        <label for="balance_preference_b">
+          <input type="radio" id="balance_preference_b" name="i" value="health_focused">
+          b) Health-focused
+        </label>
+        <label for="balance_preference_c">
+          <input type="radio" id="balance_preference_c" name="i" value="indulgent_choices">
+          c) Indulgent choices
+        </label>
+        <label for="balance_preference_d">
+          <input type="radio" id="balance_preference_d" name="i" value="no_preference">
+          d) No preference
+        </label>
+      </div>
+      
+      <!-- Question 10 -->
+      <div class="question">
+        <p>10. "Any special occasions or events influencing your dietary choices?"</p>
+        <label for="special_occasions_a">
+          <input type="radio" id="special_occasions_a" name="j" value="regular_dining">
+          a) Regular dining
+        </label>
+        <label for="special_occasions_b">
+          <input type="radio" id="special_occasions_b" name="j" value="special_occasions">
+          b) Special occasions
+        </label>
+        <label for="special_occasions_c">
+          <input type="radio" id="special_occasions_c" name="j" value="celebration">
+          c) Celebration
+        </label>
+        <label for="special_occasions_d">
+          <input type="radio" id="special_occasions_d" name="j" value="no_specific_occasions">
+          d) No specific occasions
+        </label>
+      </div>
+
+      <!-- Repeat the above structure for remaining questions -->
+
+      <button type="submit" onclick="return ab();">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
+</body>
+</html>
