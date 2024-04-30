@@ -63,6 +63,13 @@ The landing page of the website appears as:
 
 The receipes will be viewed to users in the form of PDFs.
 
+# Team Members
+
+-Ishika Goyal(2112350)
+-Muskan(2112368)
+-Sneha Agrawal(2112394)
+
+
 
 
 
