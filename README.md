@@ -40,6 +40,7 @@ After this, you can navigate and work on the website.
 ## WorkFlow
 
 Firstly , the login page of the website appears after typing the URL(localhost:8090/project/demologin.html)
+
 ![Screenshot 2024-04-30 225348](https://github.com/ishikagoyal65/No-Fuss-Feast/assets/94466535/2380ee09-9eff-4ec3-aafb-83f4f8cc2d5a)
 
 IF you are a new user,
